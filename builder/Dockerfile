@@ -3,7 +3,7 @@ ENV container docker
 RUN yum install -y gcc wget make curl-devel expat-devel \
                gettext-devel openssl-devel perl-devel zlib-devel \
                gzip bzip2 gcc-gnat texinfo file gcc-c++ flex \
-               autoconf automake ncurses-dev libtool
+               autoconf automake ncurses-dev libtool python3
 RUN cd ~; mkdir gcc_build;
 RUN cd ~/gcc_build; git clone https://github.com/gcc-mirror/gcc
 RUN cd ~/gcc_build/gcc; ./contrib/download_prerequisites
