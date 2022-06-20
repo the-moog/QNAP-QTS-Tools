@@ -1,23 +1,47 @@
 # QNAP-QTS-Tools
+
 **A compilation of Linux tools for QNAP NAS Running QTS**
 
 This is still work in progress, but it seems very useful so I thought I would share it.
 
-#####Short story
+\*\*It should work with [QTS4.5.2](https://www.qnap.com/qts/4.5.2/en-us/https:/) to [QTS5.0.0](https://www.qnap.com/qts/5.0.0/en-us/) but I've only ever tested it with my TS-451+ and I have no idea if it works with anything else.
+
+**Current working package list:**
+
+- ```git```
+- GNU compiler collection (```gcc``` compiler, bintools, etc)
+- ```fdupes```
+- GNU ```make```
+- libncurses
+- libpcre
+- Python 3.7
+- util-linux (I needed ```flock``` for VSCode)
+- **\+\+ All libaries the above require**
+
+**In testing:**
+
+* veracrypt
+* VSCode/remote
+
+**Next on the list:**
+
+* TBD
+
+## Short story
+
 I wanted to consolidate years of backups and copies of my
 data located on several external and removable drives into
 my new huge QNAP NAS.
 
 Only to find there was no build in app to deduplicate the files.
 
-I imagined I could just apt install whatever I liked but, though that is possible using Linux Station and/or Container Station, you can't do it for any app as QTS is based on a very cut down Linux and 
+I imagined I could just apt install whatever I liked but, though that is possible using Linux Station and/or Container Station, you can't do it for any app as QTS is based on a very cut down Linux and
 has none of the usual tools or libraries installed.
 
 **Spolier:** What started as a desire to just install one tool turned into a generic way to start building anything I like!!
 
-It all started when I found this:  
+It all started when I found this:
 **[Michael's Blog: Install Git on QNAP QTS](https://sdhuang32.github.io/install-git-on-qts)**
-
 
 Only it's *very* out of date.  And then there is the problem that [Centos 7 is dead](https://www.theregister.com/2021/01/26/killing_centos/).
 
@@ -36,9 +60,5 @@ If you overwrite system files you will have a world of pain fixing it.
 
 The only changes you ever have to make as a privilaged user is to run ldconfig and update
 the global user PATH
-
-
-
-
 
 https://gibsonic.org/tools/2019/08/08/gcc_building.html
